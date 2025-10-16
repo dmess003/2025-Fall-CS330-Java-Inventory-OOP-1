@@ -33,7 +33,7 @@ public class Armour extends Equippable {
         super();
 
         this.defense = 0;
-        super.stackable = false;
+         super.stackable = false;
         super.name = "";
     }
 
