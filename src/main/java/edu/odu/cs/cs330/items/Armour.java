@@ -33,6 +33,8 @@ public class Armour extends Equippable {
         super();
 
         this.defense = 0;
+        super.stackable = false;
+        super.name = "";
     }
 
     /**
@@ -46,6 +48,12 @@ public class Armour extends Equippable {
 
         this.durability = src.durability;
         // Copt the remaining fields (data members)
+        this.durability = src.durability;
+        this.element = src.element;
+        this.material = src.material;
+        this.modifier = src.modifier;
+        this.modifierLevel = src.modifierLevel;
+        this.stackable = src.stackable;
     }
 
     /**
@@ -87,7 +95,7 @@ public class Armour extends Equippable {
     public Item clone()
     {
         // Replace the return
-        return new Armour();
+        return new Armour(this);
     }
 
     /**
@@ -100,7 +108,16 @@ public class Armour extends Equippable {
         return String.join(
             System.lineSeparator(),
             String.format("  Nme: %s", super.getName()),
-            ""
+            System.lineSeparator(),
+            String.format("  Dur: %d", super.getDurability()),
+            System.lineSeparator(),
+            String.format("  Def: %d", this.getDefense()),
+            System.lineSeparator(),
+            String.format("  Mtl: %s", super.getMaterial()),
+            System.lineSeparator(),
+            String.format("  Mdr: %s %s", super.getModifier(), super.getModifierLevel()),
+            System.lineSeparator(),
+            String.format("  Emt: %s", super.getElement())
         );
     }
 }

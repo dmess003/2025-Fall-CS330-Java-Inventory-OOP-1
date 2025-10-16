@@ -52,6 +52,8 @@ public class Consumable extends Item {
         super(src.name, true);
 
         // Copy src.effect and src.uses
+        this.effect = src.effect;
+        this.uses = src.uses;
     }
 
     /**
@@ -111,7 +113,9 @@ public class Consumable extends Item {
     public Item clone()
     {
         // Replace the next line
-        return new Consumable();
+
+
+        return new Consumable(this);
     }
 
     /**
@@ -120,6 +124,13 @@ public class Consumable extends Item {
     @Override
     public String toString()
     {
-        return String.format("  Use the hint in Armour.toString%n");
+        return String.join(
+            System.lineSeparator(),
+            String.format("  Nme: %s", super.getName()),
+            System.lineSeparator(),
+            String.format("  Eft: %s", this.getEffect()),
+            System.lineSeparator(),
+            String.format("  Use: %d", this.getNumberOfUses())
+        );
     }
 }
