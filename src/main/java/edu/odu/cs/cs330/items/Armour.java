@@ -85,7 +85,12 @@ public class Armour extends Equippable {
         super.name = snr.next();
 
         // Use snr.next() and snr.nextInt() to read in values remaining fields
-
+        super.durability = snr.nextInt();
+        this.defense = snr.nextInt();
+        super.material = snr.next();
+        super.modifier = snr.next();
+        super.modifierLevel = snr.nextInt();
+        super.element = snr.next();
     }
 
     /**
@@ -111,7 +116,7 @@ public class Armour extends Equippable {
             String.format("  Dur: %d", super.getDurability()),
             String.format("  Def: %d", this.getDefense()),
             String.format("  Mtl: %s", super.getMaterial()),
-            String.format("  Mdr: %s %s", super.getModifier(), super.getModifierLevel()),
+            String.format("  Mdr: %s (Lvl %s)", super.getModifier(), super.getModifierLevel()),
             String.format("  Emt: %s%n", super.getElement())
         );
     }

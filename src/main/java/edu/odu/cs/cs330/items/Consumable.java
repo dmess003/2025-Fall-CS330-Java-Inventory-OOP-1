@@ -104,6 +104,8 @@ public class Consumable extends Item {
     {
         super.name = snr.next();
         // Refer to the hints in Armour.read
+        this.effect = snr.next();
+        this.uses = snr.nextInt();
     }
 
     /**
@@ -128,7 +130,7 @@ public class Consumable extends Item {
             System.lineSeparator(),
             String.format("  Nme: %s", super.getName()),
             String.format("  Eft: %s", this.getEffect()),
-            String.format("  Use: %d", this.getNumberOfUses())
+            String.format("  Use: %d%n", this.getNumberOfUses())
         );
     }
 }
