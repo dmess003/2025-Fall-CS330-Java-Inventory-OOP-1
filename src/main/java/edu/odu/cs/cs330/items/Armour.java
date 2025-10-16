@@ -33,7 +33,6 @@ public class Armour extends Equippable {
         super();
 
         this.defense = 0;
-         super.stackable = false;
         super.name = "";
     }
 
@@ -53,7 +52,6 @@ public class Armour extends Equippable {
         this.material = src.material;
         this.modifier = src.modifier;
         this.modifierLevel = src.modifierLevel;
-        this.stackable = src.stackable;
     }
 
     /**
