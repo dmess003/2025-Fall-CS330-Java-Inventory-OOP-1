@@ -85,9 +85,9 @@ public class Armour extends Equippable {
         super.name = snr.next();
 
         // Use snr.next() and snr.nextInt() to read in values remaining fields
+        super.material = snr.next();
         super.durability = snr.nextInt();
         this.defense = snr.nextInt();
-        super.material = snr.next();
         super.modifier = snr.next();
         super.modifierLevel = snr.nextInt();
         super.element = snr.next();
