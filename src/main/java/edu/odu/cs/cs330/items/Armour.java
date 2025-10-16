@@ -107,16 +107,11 @@ public class Armour extends Equippable {
         // Complete the String.join sequence
         return String.join(
             System.lineSeparator(),
-            String.format("  Nme: %s", super.getName()),
-            System.lineSeparator(),
-            String.format("  Dur: %d", super.getDurability()),
-            System.lineSeparator(),
-            String.format("  Def: %d", this.getDefense()),
-            System.lineSeparator(),
-            String.format("  Mtl: %s", super.getMaterial()),
-            System.lineSeparator(),
-            String.format("  Mdr: %s %s", super.getModifier(), super.getModifierLevel()),
-            System.lineSeparator(),
+            String.format("  Nme: %s%n", super.getName()),
+            String.format("  Dur: %d%n", super.getDurability()),
+            String.format("  Def: %d%n", this.getDefense()),
+            String.format("  Mtl: %s%n", super.getMaterial()),
+            String.format("  Mdr: %s %s%n", super.getModifier(), super.getModifierLevel()),
             String.format("  Emt: %s", super.getElement())
         );
     }
